@@ -25,6 +25,7 @@
   }
 
   a {
+    
     text-align: center;
   }
   
@@ -36,7 +37,23 @@
     align-items: center;
     justify-content: center;
   }
-
+  .link-main{
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    
+    text-align: center;
+  }
+  .links-main{
+    
+    display: inline-block;
+    margin: 2rem 0rem;
+    text-align: center;
+    padding-top: 5%;
+    padding-left: 32.5%; 
+    
+    font-size:22px;
+    color: #afbbca;
+  }
   .navbar-brand {
     color:#afbbca;
     text-decoration: none;
@@ -54,13 +71,13 @@
   }
 
   .glass {
-    background: rgb(31, 14, 14);
+    background: rgb(27, 45, 59);
     min-height: 80vh;
-    width: 60%;
+    width: 71%;
     background: linear-gradient(
       to right bottom,
-      rgba(39, 18, 18, 0.7),
-      rgba(24, 12, 12, 0.582)
+      rgba(24, 41, 51, 0.7),
+      rgba(12, 16, 24, 0.582)
     );
     border-radius: 2rem;
     z-index: 2;
@@ -83,11 +100,11 @@
   
   .circle1 {
     top: 5%;
-    right: 15%;
+    right: 10%;
   }
   .circle2 {
     bottom: 5%;
-    left: 12%;
+    left: 10%;
   }
   .dashboard {
     flex: 1;

@@ -1,10 +1,10 @@
 
     <main>
       <section class="glass">
-          <nav>
+         
         <div class="dashboard">
           <div class="user">
-            <img src="/images/Main-icon.png" alt="" />
+            <a href= "/"> <href=><img  src="/images/Main-icon.png" alt="" /></a>
             <h1><a class="nav-button" href= "/" >Dashboard</a></h1>
             <h2><a class="nav-button" href= "/" >Empresarial</a></h2>
           </div>
@@ -36,31 +36,35 @@
           </div>
         </div> 
       
-        </nav>
+
+        <div class="main">
+            <div class="status">
+                <h1>Eliminar una empresa</h1>
+               
+            </div>
 
             <div class="cards">
 
                 <div class="card">
-                    <div class="status">
-                <h1>Delete company</h1>
-               
-            </div>
-                    <div class="form">
-                      <form action="/company/delete" method="POST">
-                           <input type="text" name="_id" required >
+                    
+                    <form class="form" action="/company/delete" method="POST">
+                      <div >
+                      
+                        <input type="text" name="_id" required >
                           <label for="name" class="label-name">
                                 <span class="content-name">Id</span>
                           </label>
                         <div class="warpbtn">
                           <button class="btn">
-                            Delete                       
+                            Eliminar                       
                           </button>
                         </div> 
-
-                      </form>
-                       
                       
                     </div>
+                    
+                    
+                    </form>
+                    
                                           
                 </div>                    
             </div>
@@ -71,3 +75,4 @@
     <div class="circle2"></div>
   </body>
 </html>
+        
