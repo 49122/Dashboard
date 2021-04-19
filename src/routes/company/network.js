@@ -15,15 +15,30 @@ router.get('/add',  (req, res) => {
     res.render('links/add')
 });
 
-router.post('/add', arrayValidation(),validationHandler(createCompanySchema), async  (req, res,next) => {
+router.post('/add',validationHandler(createCompanySchema), arrayValidation(), async  (req, res,next) => {
         try {
 
-        const companyCreated = await Control.create(req.body)
-        res.render('links/add',{message:{
-            message: 'Company added',
-            companyName: companyCreated.name,
-            companyid: companyCreated._id
-            }})
+            const elements = req.body.elements.split(',').map(Number)
+            const stock_number = Number(req.body.Acciones_en_circulacion) 
+
+            const valor_real = []
+
+            for (let index = 0; index < elements.length; index++) {
+                
+                valor_real.push(elements[index] + stock_number)
+            }
+            const valor_realv2 = valor_real.map(String)
+            const template = {
+                name: req.body.name,
+                description: req.body.description,
+                elements: valor_realv2
+            }
+            const companyCreated = await Control.create(template)
+            res.render('links/add',{message:{
+                message: 'Company added',
+                companyName: companyCreated.name,
+                companyid: companyCreated._id
+                }})
         }catch (error) {
             next(error)
         }
@@ -96,10 +111,6 @@ router.post('/delete', async  (req, res,next) => {
 router.get('/registered',  async (req, res) => {
     const cuenta = await Control.getCount(); 
     const registros = await Control.getAll();
-    for (let index = 0; index < registros.length; index++) {
-        registros[index].elements= registros[index].elements[0].split(",")  
-    }
-    
     res.render('links/registered',{ cuenta: cuenta,  registros: registros})
 });
 
