@@ -2,12 +2,12 @@
         <div class="main">
           <div class="status">
             <h1><a class="nav-button" href= "/" >Inicio</a></h1>
-            <img src="/images/Main-icon.png" alt="" />
+            <a href= "/"> <href=><img  src="/images/Main-icon.png" alt="" /></a>
             <h1>Empresas registradas: {{cuenta}}</h1>
      
 
         {{#list registros}}
-        <canvas id="Dashboard{{{id}}}" width="400" height="400"></canvas>
+        <canvas id="Dashboard{{{id}}}" width="1500" height="700"></canvas>
         <script script-src='self' src="/javascript/chart.js"></script>
         <script>
         var element_id = {{id}}
