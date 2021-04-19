@@ -1,0 +1,42 @@
+{
+  "name": "dashboard-empresarial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:49122/Dashboard.git"
+  },
+  "scripts": {
+    "dev": "DEBUG=app:* nodemon src/index",
+    "start": "NODE_ENV=production node src/index",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.2",
+    "chart.js": "^3.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "helmet": "^4.4.1",
+    "http": "0.0.1-security",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.4",
+    "morgan": "^1.10.0",
+    "node": "^15.14.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}

@@ -1,0 +1,36 @@
+{{#if message }}
+<div id="modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{message.message}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{#if message.companyName}}
+                <p> {{ message.companyName }} </p>
+                {{/if}}
+
+                {{#if message.companyid}}
+                <p>Guarda este id: {{ message.companyid }} </p>
+                {{/if}}
+                {{#if message.companyDescription}}
+                <p>Descripcion:{{ message.companyDescription }} </p>
+                {{/if}}
+                {{#if message.companyElements}}
+                <p>Elementos: </p>{{ message.companyElements }}
+                {{/if}}
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+{{/if}}
+{{#if error}}
+    <h5 class="text-center">{{error}}</h5>
+{{/if}}

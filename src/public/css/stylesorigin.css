@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main{
+  min-height:100hv;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.glass{
+  background:wihte;
+  min-height:80hv;
+  width:60%;
+  background: linear-gradient(
+    to right bottom, rgba(255,255,255,0.7)
+    linear-gradient(to right bottom, rgba(255,255,255,0.3))
+  );
+  border-radius:2rem;
+}
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+
+  )
+}
+.container{
+  color:rgb(241, 34, 34);
+}
+
+
+.prueba-dentro-de-html{
+  font-family: sans-serif;
+  color:green;
+}
+.prueba-css {
+  font-family: sans-serif;
+  color:red;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    background: rgb(172, 108, 108) !important;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255) !important;
+}
+
+.masthead {
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background: url('/img/background.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.masthead h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+    }
+    .masthead h1 {
+      font-size: 5.5rem;
+    }
+  }
+
